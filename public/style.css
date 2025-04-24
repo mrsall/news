@@ -1,0 +1,100 @@
+:root {
+  --primary-color: #4a90e2;
+  --bg-color: #f5f7fa;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav button.active,
+nav button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+article.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+article.card h2 {
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+article.card p {
+  flex: 1;
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+article.card small {
+  display: block;
+  margin: 0 1rem 1rem;
+  color: #777;
+}
+
+article.card a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+footer {
+  background: #e1e1e1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
